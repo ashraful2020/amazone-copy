@@ -1,16 +1,19 @@
 import React from 'react'
 import { FaSearch, FaCartPlus } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 import './Header.css'
 const Header = () => {
 
   return (
     <div className="header">
-      <img
-        className="header-logo"
-        src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-        alt="logo"
-        srcSet=""
-      />
+      <Link to="/">
+        <img
+          className="header-logo"
+          src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+          alt="logo"
+          srcSet=""
+        />
+      </Link>
       <div className="header-search">
         <input className="search-input" type="text" />
         <FaSearch className="search-icon"></FaSearch>
@@ -28,9 +31,11 @@ const Header = () => {
           <span>Your</span>
           <span>payment</span>
         </div>
+        <Link to="/checkout">
         <div className="header-cart-icon">
-          <FaCartPlus/> <span>0</span>
+          <FaCartPlus /> <span>0</span>
         </div>
+        </Link>
       </div>
     </div>
   );
