@@ -1,6 +1,5 @@
-import React from "react";
 import CurrencyFormat from "react-currency-format";
-
+import './Total.css'
 const Total = () => {
   return (
     <div className="subtotal">
@@ -19,7 +18,10 @@ const Total = () => {
         value={0}
         displayType={"text"}
         prefix={"$"}
-      ></CurrencyFormat>
+      />
+      <button type="submit">
+        Proceed to checkout 
+      </button>
     </div>
   );
 };
